@@ -1,11 +1,15 @@
-const app = require('express')();
+const express = require('express')
+const app = express();
 // const { v4 } = require('uuid');
 
-app.get('/api', (req, res) => {
-  res.end(`{ "type": "message", "text": "This is a reply!" }`);
-});
+app.use(express.json());
+
 app.post('/api', (req, res) => {
-  res.end(`{ "type": "message", "text": "This is a reply!" }`);
+  console.log(req.body)
+  res.json({
+    type: "message",
+    text: req.body
+  })
 });
 
 module.exports = app;
