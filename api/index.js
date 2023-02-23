@@ -8,7 +8,7 @@ app.post('/api', (req, res) => {
   console.log(req.body)
   res.json({
     type: "message",
-    text: req.body
+    text: JSON.stringify(req.body)
   })
 });
 
