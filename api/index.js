@@ -5,10 +5,19 @@ const app = express();
 app.use(express.json());
 
 app.post('/api', (req, res) => {
-  console.log(JSON.stringify(req.body, null, 4))
+  console.log(req.body)
   res.json({
     type: "message",
-    text: JSON.stringify(req.body)
+    text: `[{
+		"Column1": "Value1",
+		"Column2": "Value2",
+		"Column3": "Value3"
+	}, {
+		"Column1": "Value4",
+		"Column2": "Value5",
+		"Column3": "Value6"
+	}]`
+
   })
 });
 
