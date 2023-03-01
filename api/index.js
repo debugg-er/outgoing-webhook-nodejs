@@ -22,7 +22,7 @@ app.post('/api', (req, res) => {
   console.log(req.body)
   res.json({
     type: "message",
-    text: tableHTML
+    text: tableHtml 
   })
 });
 
