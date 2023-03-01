@@ -8,7 +8,7 @@ app.post('/api', (req, res) => {
   console.log(req.body)
   res.json({
     type: "message",
-    text: "hoho \n \n Yeah \n \n \t HOHO"
+    text: JSON.stringify(req.body, null, 4)
   })
 });
 
