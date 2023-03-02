@@ -14,7 +14,7 @@ app.post('/api', (req, res) => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer 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'
+      'Authorization': 'Bearer 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'
     },
     body: JSON.stringify({
       model: "gpt-3.5-turbo",
@@ -28,7 +28,7 @@ app.post('/api', (req, res) => {
       console.log(JSON.stringify(data, null, 4))
       res.json({
         type: "message",
-        text: data.choices[0].message.text.content
+        text: data.choices[0].message.content
       })
     })
     .catch(error => {
