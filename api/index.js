@@ -14,7 +14,7 @@ app.post('/api', (req, res) => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer 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'
+      'Authorization': 'Bearer ' + process.env.API_KEY
     },
     body: JSON.stringify({
       model: "gpt-3.5-turbo",
